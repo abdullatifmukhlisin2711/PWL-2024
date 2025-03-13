@@ -16,3 +16,4 @@ class ProductController extends Controller
         return view('blog.products', ['categories' => $categories]);
     }
 }
+?>
