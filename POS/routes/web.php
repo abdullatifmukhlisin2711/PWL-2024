@@ -15,8 +15,12 @@ use App\Http\Controllers\SalesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
-Route::get('/', [HomeController::class, 'index']);
-Route::get('/products', [ProductController::class, 'index']);
-Route::get('/user', [UserController::class, 'index']);
-Route::get('/sales', [SalesController::class, 'index']);
+Route::get('/',function(){
+    return view('welcome');
+});
+Route::get('/level', [HomeController::class, 'index']);
 
+// Route::get('/', [HomeController::class, 'index']);
+// Route::get('/products', [ProductController::class, 'index']);
+// Route::get('/user', [UserController::class, 'index']);
+// Route::get('/sales', [SalesController::class, 'index']);
