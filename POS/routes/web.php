@@ -8,6 +8,10 @@ use App\Http\Controllers\SalesController;
 use App\Http\Controllers\KategoriController;
 use App\Http\Controllers\LevelController;
 
+
+
+
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -20,14 +24,15 @@ use App\Http\Controllers\LevelController;
 */
 
 
+
 Route::get('/',function(){
     return view('welcome');
 });
 Route::get('/level', [LevelController::class, 'index']);
 Route::get('/kategori', [KategoriController::class, 'index']);
+Route::get('/user', [usercontroller::class, 'index']);
 
 
 // Route::get('/', [HomeController::class, 'index']);
 // Route::get('/products', [ProductController::class, 'index']);
-// Route::get('/user', [UserController::class, 'index']);
 // Route::get('/sales', [SalesController::class, 'index']);
