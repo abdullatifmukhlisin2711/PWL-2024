@@ -5,6 +5,9 @@ use App\Http\Controllers\HomeController;
 use App\Http\Controllers\ProductController;
 use App\Http\Controllers\UserController;
 use App\Http\Controllers\SalesController;
+use App\Http\Controllers\KategoriController;
+use App\Http\Controllers\LevelController;
+
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -15,10 +18,14 @@ use App\Http\Controllers\SalesController;
 | be assigned to the "web" middleware group. Make something great!
 |
 */
+
+
 Route::get('/',function(){
     return view('welcome');
 });
-Route::get('/level', [HomeController::class, 'index']);
+Route::get('/level', [LevelController::class, 'index']);
+Route::get('/kategori', [KategoriController::class, 'index']);
+
 
 // Route::get('/', [HomeController::class, 'index']);
 // Route::get('/products', [ProductController::class, 'index']);
