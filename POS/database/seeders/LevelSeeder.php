@@ -13,12 +13,14 @@ class LevelSeeder extends Seeder
      */
     public function run(): void
     {
-        $data = [
+        DB::table('m_level')->insert([
+        // $data = [
             ["level_id" => 1, "level_code" => "ADM", "level_nama" => "Administrator"],
             ["level_id" => 2, "level_code" => "MNG", "level_nama" => "Manager"],
             ["level_id" => 3, "level_code" => "STF", "level_nama" => "Staff/Kasir"],
-        ];
-        DB::table('m_level')->insert($data);
+        ]);
+
+        // DB::table('m_level')->insert($data);
         
 
 
